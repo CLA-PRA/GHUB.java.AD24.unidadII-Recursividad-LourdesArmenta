@@ -18,32 +18,5 @@ public class BusquedaBinaria {
         }
     }
 
-    public static int busquedaBinaria_iterativa(int[] arreglo, int valor) {
-        int inicio = 0;
-        int fin = arreglo.length - 1;
-        while (inicio <= fin) {
-            int medio = (inicio + fin) / 2;
-            if (arreglo[medio] == valor) {
-                return medio;
-            } else if (arreglo[medio] < valor) {
-                inicio = medio + 1;
-            } else {
-                fin = medio - 1;
-            }
-        }
-        return -1;
-    }
-    public static int busquedaBinaria_recursiva(int[] arreglo, int valor, int inicio, int fin) {
-        if (inicio > fin) {
-            return -1;
-        }
-        int medio = (inicio + fin) / 2;
-        if (arreglo[medio] == valor) {
-            return medio;
-        } else if (arreglo[medio] < valor) {
-            return busquedaBinaria_recursiva(arreglo, valor, medio + 1, fin);
-        } else {
-            return busquedaBinaria_recursiva(arreglo, valor, inicio, medio - 1);
-        }
-    }
+   
 }

@@ -13,20 +13,5 @@ public class Factorial {
         
     }
 
-    public static long factorial_iterativo(int x){
-        long fact=1L;
-        for(int i=x;i>1;i--){
-            fact = fact*i;
-
-        }
-        return fact;
-    }
-
-    public static long factorial_recursivo(int x){
-        if(x==0)
-            return 1;
-        else
-            return x*factorial_recursivo(x-1); 
-    }
     
 }
